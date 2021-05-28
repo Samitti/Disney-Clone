@@ -5,7 +5,15 @@ const Login = (props) => {
         <Container>            
             <Content>
                 <CTA>
-                    <CTALogoOne src="/images/cta-logo-one.png" alt="" />
+                    <CTALogoOne src="/images/cta-logo-one.svg" alt="" />
+                    <SignUp>GET ALL THERE</SignUp>
+                    <Description>
+                        Get Premier Access to Raya and the Last Dragon for 
+                        an aditional fee with a Deany+ subscription. As of 
+                        03/26/21, the price of Disney+ and the Disney bundle 
+                        will increase by $1. 
+                    </Description>
+                    <CTALogoTwo src="/images/cta-logo-two.png" alt="" />
                 </CTA>
                 <BgImage />
             </Content>
@@ -31,8 +39,7 @@ const Content = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-right: 20%;
-    padding-left: 20%;
+    padding: 80px 40px;
     height: 100%;
 `;
 
@@ -52,7 +59,6 @@ const BgImage = styled.div`
 const CTA = styled.div`
     margin-bottom: 2vw;
     max-width: 650px;
-    min-width: 50px;
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
@@ -62,6 +68,9 @@ const CTA = styled.div`
     text-align: center;
     margin-right: auto;
     margin-left: auto;
+    transition-timing-function: ease-out;
+    transition: opacity 0.24;
+    width: 100%
 `;
 
 const CTALogoOne = styled.img`
@@ -69,6 +78,40 @@ const CTALogoOne = styled.img`
     max-width: 600px;
     min-height: 1px;
     display: block;
+    width: 100%;
+`;
+
+const SignUp = styled.a`
+    font-weight: bold;
+    color: #f9f9f9;
+    background-color: #0063e5;
+    margin-bottom: 12px;
+    width: 100%;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    padding: 16.5px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: #0483ee;
+    }
+`;
+
+const Description = styled.p `
+    color: hsla(0, 0%, 95.3%, 1);
+    font-size: 11px;
+    margin: 0 0 24px;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+`;
+
+const CTALogoTwo = styled.img`
+    max-width: 600px;
+    margin-bottom: 20px;
+    display: block;
+    vertical-align: bottom;
+    min-height: 1px;
     width: 100%;
 `;
 
