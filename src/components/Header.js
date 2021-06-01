@@ -11,7 +11,28 @@ const Header = (props) => {
                     <img src="/images/home-icon.svg" alt="Home" />
                     <span>HOME</span>
                 </a>
+                <a href="/">
+                    <img src="/images/search-icon.svg" alt="Home" />
+                    <span>SEARCH</span>
+                </a>
+                <a href="/">
+                    <img src="/images/watchlist-icon.svg" alt="Home" />
+                    <span>WATCHLIST</span>
+                </a>
+                <a href="/">
+                    <img src="/images/original-icon.svg" alt="Home" />
+                    <span>ORIGINALS</span>
+                </a>
+                <a href="/">
+                    <img src="/images/movie-icon.svg" alt="Home" />
+                    <span>MOVIES</span>
+                </a>
+                <a href="/">
+                    <img src="/images/series-icon.svg" alt="Home" />
+                    <span>SERIES</span>
+                </a>
             </NavMenu>
+            <Login>Login</Login>
         </Nav>
     );
 };
@@ -109,5 +130,22 @@ const NavMenu = styled.div`
     // }
 `;
 
+
+const Login = styled.a`
+    backgroundcolor: rgb(0, 0, 0, 0.6);
+    padding: 8px 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 1px solid #f9f9f9;
+    border-radius: 4px;
+    transition: all 0.2s ease 0s;
+
+    &:hover {
+        background-color: #f9f9f9;
+        color: #000;
+        border-color: transparent;
+    }
+
+    `;
 
 export default Header;
