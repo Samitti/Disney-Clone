@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { auth, provider } from "./firebase";
-import { selectUserName, selectUserEmail, selectUserPhoto, setUserLoginDetails, setSignOutState} from "../features/user/userSlice";
+import { selectUserName, selectUserPhoto, setUserLoginDetails, setSignOutState} from "../features/user/userSlice";
 
 const Header = (props) => {
     const dispatch = useDispatch();
