@@ -22,36 +22,33 @@ const Home = (props) => {
     useEffect(() => {
         db.collection('movies').onSnapshot((snapshot) => {
             snapshot.docs.map((doc) => {
+                console.log(recommends);
                 switch(doc.data().type) {
                     case 'recommend':
-                        recommends = [...recommends, { id: doc.id, ...doc.data( )}]
-                        // recommends.push({id: doc.id, ...doc.data()})
+                        recommends = [...recommends, { id: doc.id, ...doc.data()}];
                         break;
                     case 'new':
-                        newDisney = [...newDisney, { id: doc.id, ...doc.data( )}]
-                        // newDisney.push({id: doc.id, ...doc.data()})
+                        newDisney = [...newDisney, { id: doc.id, ...doc.data()}];
                         break;
                     case 'original':
-                        originals = [...originals, { id: doc.id, ...doc.data( )}]
-                        // originals.push({id: doc.id, ...doc.data()})
+                        originals = [...originals, { id: doc.id, ...doc.data()}];
                         break;
                     case 'trending':
-                        trending = [...trending, { id: doc.id, ...doc.data( )}]
-                        // trending.push({id: doc.id, ...doc.data()})
+                        trending = [...trending, { id: doc.id, ...doc.data()}];
                         break;
-
                 }
             });
-        });
-        
-        dispatch(
-            setMovies({
-                recommend: recommends,
-                newDisney: newDisney,
-                original: originals,
-                trending: trending,
-            })
-        );
+
+            dispatch(
+                setMovies({
+                    recommend: recommends,
+                    newDisney: newDisney,
+                    original: originals,
+                    trending: trending,
+                })
+            );
+        });       
+       
     }, [userName]);
 
     return(
